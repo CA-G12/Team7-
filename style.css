@@ -8,9 +8,56 @@ html {
 }
 :root {
   --primary: #39b34a;
-  --background: #f8f8f8;
+  --background: gold;
   --secondery: #fef7f5;
   --white: #ffffff;
-  --fontColor: #1d1d35;
+  --fontColor: #F8F8F8;
   --icon: #39b34a;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; 
+  background-color: var(--fontColor);
+}
+.btns{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btns button{
+  margin-top: 10px;
+  width: 300px;
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: var(--primary);
+  color: var(--secondery);
+}
+.btns button:hover{
+background-color: var(--background);
+color: var(--icon);
+}
+header{
+   padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+ 
+  background-color: var(--white);
+  border-bottom: 1px solid #caddcc;
+  width: 100%;
+}
+header p{
+  text-align: center;
+  color: var(--primary);
+}
+header span{
+  color: var(--background);
+  font-size: 35px;
+  -webkit-text-stroke: 1px rgb(6, 3, 2);
+
 }
