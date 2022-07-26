@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Manrope", sans-serif;
+}
+:root {
+  --primary: #39b34a;
+  --background: #f8f8f8;
+  --secondery: #fef7f5;
+  --white: #ffffff;
+  --fontColor: #1d1d35;
+  --icon: #39b34a;
+}
