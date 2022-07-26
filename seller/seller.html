@@ -32,7 +32,6 @@
           <img src="img/UntitledDesign.png" alt="logo Website" />
         </a>
       </div>
-      <i class="fas fa-bars" id="btn-close-navbar"></i>
 
       <!-- navBar Content -->
       <div id="navbar-content" class="navbar-content navbar-hidden">
@@ -54,16 +53,171 @@
           <button type="button" class="btn-seller" id="btn-seeler">
             Seller
           </button>
-
-          <!--  
-          <button type="button" class="btn-shopping-bag" id="btn-shopping-bag">
-            <span class="count-cart">2</span>
-            <i class="far fa-shopping-bag"></i>
-          </button>
-          -->
         </div>
       </div>
     </nav>
     <!-- navBar: End -->
+
+    <!-- Modal For Add Products -->
+    <section
+      class="modal-create-product modal-hidden"
+      id="modal-create-product"
+    >
+      <div class="modal-product-content">
+        <h2 id="add-product-title" class="add-product-title">
+          Add more products to sell more
+        </h2>
+        <div class="add-product-content">
+          <div class="product-form-input">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              type="text"
+              class="name-input"
+              placeholder="Name of product..."
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="product-form-input">
+            <label for="name">Detail</label>
+            <textarea
+              name="detail"
+              id="detail"
+              cols="10"
+              rows="2"
+              class="detail-input"
+            >
+            </textarea>
+          </div>
+
+          <div class="product-form-input">
+            <label for="category">Category</label>
+            <div class="custom-select">
+              <select class="category-input" id="category">
+                <option disabled value="">Choses Category</option>
+                <option value="Art">Art</option>
+                <option value="Clothes">Clothes</option>
+                <option value="Games">Games</option>
+                <option value="Phones">Phones</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="product-form-input">
+            <label for="product-price">Price</label>
+            <div class="product-price">
+              <i class="fas fa-dollar-sign"></i>
+              <input
+                class="price-input"
+                id="product-price"
+                type="number"
+                min="0.01"
+                value="0.01"
+                step="1"
+                placeholder="Price of product..."
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <div class="product-form-input">
+            <label for="image-url">Image</label>
+            <div class="image-url">
+              <i class="fas fa-link"></i>
+              <input
+                class="image-url-input"
+                id="image-url"
+                type="url"
+                placeholder="Image URL of product..."
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <div class="product-form-input">
+            <button class="btn-product" id="btn-submit-form-product">
+              Add Product
+            </button>
+          </div>
+        </div>
+        <!-- End: add product content Class -->
+      </div>
+      <!-- End: modal product content Class -->
+    </section>
+    <!-- End: Modal for add Products -->
+
+    <!-- Container || Main Section -->
+    <div class="container">
+      <main>
+        <section class="some-fun">
+          <section class="filter-sort">
+            <!-- Filter Price -->
+            <div class="for-arrow">
+              <select name="sort" id="sort" class="select">
+                <option value="None">Sort</option>
+                <option value="Maximum">Max Price</option>
+                <option value="Minimum">Min Price</option>
+              </select>
+              <i class="far fa-chevron-down arrow"></i>
+            </div>
+
+            <!-- Filter Categoryes -->
+            <div class="for-arrow">
+              <select class="select" name="filter" id="filter">
+                <option value="None">Filter</option>
+                <option value="Art">Animals</option>
+                <option value="Clothes">Birds</option>
+                <option value="Games">Fishs</option>
+              </select>
+              <i class="far fa-chevron-down arrow"></i>
+            </div>
+          </section>
+
+          <section class="wrap-btn-view">
+            <section class="list-grid">
+              <button id="btnList" class="btn list">
+                <i class="far fa-list"></i>
+              </button>
+
+              <button id="btnGrid" class="btn grid">
+                <i class="far fa-border-all active"></i>
+              </button>
+            </section>
+          </section>
+        </section>
+
+        <!-- Item For Cart -->
+        <section id="product-list" class="wrap-product-list">
+          <ul class="product-list">
+            <li>
+              <div class="wrap-img">
+                <div data-index="0" class="edit">
+                  <i class="fa fa-pencil"></i>
+                </div>
+                <div class="category">Animals</div>
+                <img
+                  class="img"
+                  src="https://greenbackend.com/static/media/gbe-hero.54f456ed.png"
+                />
+              </div>
+              <div class="info-product">
+                <div class="name-price">
+                  <h3 class="name">one Product</h3>
+                  <p class="price">$111</p>
+                </div>
+                <div data-index="0" class="remove-item">
+                  <i class="far fa-trash-alt"></i>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <section class="empty" style="display: none">
+            <p class="emptyText">There's no any Product, add Some Product</p>
+          </section>
+        </section>
+      </main>
+    </div>
+    <!-- End: Container || Main section -->
   </body>
 </html>
