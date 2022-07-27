@@ -1,4 +1,8 @@
-const { checkFormData, convertItemToObject } = require("./logic.js");
+const {
+  checkFormData,
+  convertItemToObject,
+  editProduct,
+} = require("./logic.js");
 
 describe("Test convert data product to object", () => {
   test("Product should be object", () => {
@@ -25,5 +29,29 @@ describe("Test  Check Form Data", () => {
     expect(checkFormData("name", "", "category", "image")).toBeFalsy();
     expect(checkFormData("", "price", "category", "image")).toBeFalsy();
     expect(checkFormData("", "", "", "")).toBeFalsy();
+  });
+});
+
+describe("Test Edit Product function", () => {
+  test("edit name for product ", () => {
+    const editedProduct = {
+      id: 1,
+      name: "One Product",
+      price: 111,
+      category: "cats",
+      image: "https://greenbackend.com/static/media/gbe-hero.54f456ed.png",
+    };
+
+    const actual = editProduct(1, editedProduct);
+    const expected = [
+      {
+        id: 1,
+        name: "Edit For Product",
+        price: 111,
+        category: "cats",
+        image: "https://greenbackend.com/static/media/gbe-hero.54f456ed.png",
+      },
+    ];
+    expect(actual).toEqual(expected);
   });
 });
