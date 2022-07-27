@@ -187,7 +187,36 @@ button {
 .btn-shopping-bag:hover {
   background-color: #cee2d0;
 }
+.sortFilterBtns{
+display: flex;
+justify-content: center;
+margin: 20px;
+}
+.sortFilterBtns button{
+  width: 100px;
+  padding: 10px 0;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+}
+.sortFilterBtns button:hover{
+  background-color: var(--icon);
+  color: var(--background);
+}
+.sortFilterBtns select:hover{
+  background-color: var(--icon);
+  color: var(--background);
+}
+.sortFilterBtns select{
+  width: 100px;
+  padding: 10px 0;
+  margin: 10px;
+  border: 1px solid var(--secondery);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .count-cart {
   position: absolute;
   top: 0;
@@ -223,8 +252,14 @@ button {
   position: relative;
   /* border-radius: 12px; */
   background-color: var(--fontColor);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.8s linear all;
 
 
+
+}
+.container .card:hover{
+  top: 10px;
 }
 .container .card img {
   width: 100%;

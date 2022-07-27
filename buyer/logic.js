@@ -4,3 +4,9 @@ function search(array, value) {
   )
   return newArr
 }
+function filterCategory(array, value) {
+  return array.filter((item) => item.category === value)
+}
+function sorting(array) {
+  return array.sort((a, b) => a.price - b.price)
+}
