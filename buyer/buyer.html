@@ -1,27 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- fonts link -->
-  <link rel="preconnect" href="https://fonts.googleapis.com/" />
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2family=Manrope:wght@200;300;400;500;600;700;800&family=Yeseva+One&display=swap"
-    rel="stylesheet"
-  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./buyer.css" />
+    <!-- fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2family=Manrope:wght@200;300;400;500;600;700;800&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
 
-  <!--Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-    crossorigin="anonymous"
-  />
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+    <!--Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Buyer</title>
+  </head>
+  <body>
+    <!-- navBar -->
+    <nav class="navbar">
+      <!-- logo -->
+      <div id="navbar-content" class="navbar-content navbar-hidden">
+        <!-- Search Container -->
+        <div class="search-container">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="Search..."
+          />
+        </div>
+
+        <!-- Button container -->
+        <div class="btn-container">
+          <button type="button" class="btn-buyer active" id="btn-buyer">
+            Buyer
+          </button>
+
+          <button type="button" class="btn-seller" id="btn-seeler">
+            Seller
+          </button>
+
+          <!--  
+          <button type="button" class="btn-shopping-bag" id="btn-shopping-bag">
+            <span class="count-cart">2</span>
+            <i class="far fa-shopping-bag"></i>
+          </button>
+          -->
+        </div>
+      </div>
+    </nav>
+    <!-- navBar: End -->
+    <section class="container"></section>
+    <script src="./logic.js"></script>
+    <script src="./buyer.js"></script>
+    <script
+      src="https://kit.fontawesome.com/872a0c00b6.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
