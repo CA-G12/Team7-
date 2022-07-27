@@ -41,12 +41,12 @@ function createItem(items) {
 createItem(items)
 
 function addToCart(item) {
-  cart.push(item)
+  cart.push({ ...item, amount: 1 })
+  console.log(cart)
   localStorage.setItem('cart', JSON.stringify(cart))
 }
 
 inputSearch.addEventListener('keyup', () => {
-  let searchArr = search(items, inputSearch.value)
   container.textContent = ''
   if (!inputSearch.value) {
     createItem(items)
