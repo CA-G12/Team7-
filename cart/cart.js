@@ -81,3 +81,20 @@ totalAmount.textContent = +(totalAmount.textContent)-(itemAmount.textContent)
 localStorage.setItem('cart',JSON.stringify(items))
 })
 }
+let totalP= 0
+items.forEach((ele,i) => { 
+            totalP += items[i]["price"] })
+let totalA = items.length
+totalPrice.textContent = totalP
+totalAmount.textContent = totalA
+
+//function for increasing
+function increaseAmounts(ele,itemAmount,price,array){
+    console.log(itemAmount);
+    itemAmount.textContent = +(itemAmount.textContent)+1
+    totalPrice.textContent= +(totalPrice.textContent) +price 
+    totalAmount.textContent = +(totalAmount.textContent)+1
+    const ar = incLogic(ele,array);
+    localStorage.setItem('cart',JSON.stringify(ar))
+
+}
