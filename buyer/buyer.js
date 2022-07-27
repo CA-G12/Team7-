@@ -41,8 +41,7 @@ function createItem(items) {
 createItem(items)
 
 function addToCart(item) {
-  cart.push(item)
-  
+  cart.push({ ...item, amount: 1 })
   localStorage.setItem('cart', JSON.stringify(cart))
 }
 
