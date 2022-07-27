@@ -176,8 +176,6 @@ function renderProductSellerPage(productList) {
       list.appendChild(infoProduct);
       listProducts.insertBefore(list, listProducts.childNodes[0]);
     });
-  } else {
-    alert("Add To Product");
   }
 }
 
