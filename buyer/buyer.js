@@ -64,6 +64,7 @@ cata.addEventListener('click', () => {
 })
 let isSort = true
 
+
 sortBtn.addEventListener('click', () => {
   container.textContent = ''
   if (isSort == true) {
