@@ -98,3 +98,12 @@ function increaseAmounts(ele,itemAmount,price,array){
     localStorage.setItem('cart',JSON.stringify(ar))
 
 }
+//function for decreasing
+function decreaseAmounts(ele,itemAmount,price,array){
+    itemAmount.textContent = +(itemAmount.textContent) -(1)
+    console.log(totalPrice.textContent)
+    totalPrice.textContent= +(totalPrice.textContent) -price 
+    totalAmount.textContent = +(totalAmount.textContent)-1
+    const ar = decLogic(ele , array);
+    localStorage.setItem('cart',JSON.stringify(ar))
+}
