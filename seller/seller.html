@@ -25,16 +25,8 @@
   <body>
     <!-- navBar -->
     <nav class="navbar">
-      <!-- logo -->
-
-      <div class="logo">
-        <a href="index.html">
-          <img src="img/UntitledDesign.png" alt="logo Website" />
-        </a>
-      </div>
-
       <!-- navBar Content -->
-      <div id="navbar-content" class="navbar-content navbar-hidden">
+      <section id="navbar-content" class="navbar-content navbar-hidden">
         <!-- Search Container -->
         <div class="search-container">
           <i class="far fa-search"></i>
@@ -54,7 +46,7 @@
             Seller
           </button>
         </div>
-      </div>
+      </section>
     </nav>
     <!-- navBar: End -->
 
@@ -63,9 +55,9 @@
       class="modal-create-product modal-hidden"
       id="modal-create-product"
     >
-      <div class="modal-product-content">
+      <form class="modal-product-content" method="post" action="">
         <h2 id="add-product-title" class="add-product-title">
-          Add more products to sell more
+          Add more products
         </h2>
         <div class="add-product-content">
           <div class="product-form-input">
@@ -96,10 +88,9 @@
             <div class="custom-select">
               <select class="category-input" id="category">
                 <option disabled value="">Choses Category</option>
-                <option value="Art">Art</option>
-                <option value="Clothes">Clothes</option>
-                <option value="Games">Games</option>
-                <option value="Phones">Phones</option>
+                <option value="Animals">Animals</option>
+                <option value="Birds">Birds</option>
+                <option value="Fishs">Fishs</option>
               </select>
             </div>
           </div>
@@ -142,13 +133,13 @@
           </div>
         </div>
         <!-- End: add product content Class -->
-      </div>
+      </form>
       <!-- End: modal product content Class -->
     </section>
     <!-- End: Modal for add Products -->
 
     <!-- Container || Main Section -->
-    <div class="container">
+    <section class="container">
       <main>
         <section class="some-fun">
           <section class="filter-sort">
@@ -186,10 +177,12 @@
             </section>
           </section>
         </section>
+        <!-- End: some-fun Class -->
 
-        <!-- Item For Cart -->
-        <section id="product-list" class="wrap-product-list">
+        <!-- products -->
+        <figure id="product-list" class="wrap-product-list">
           <ul class="product-list">
+            <!-- The (li) will be created through the (seller.js) file =>> Dom  -->
             <li>
               <div class="wrap-img">
                 <div data-index="0" class="edit">
@@ -212,12 +205,12 @@
               </div>
             </li>
           </ul>
-          <section class="empty" style="display: none">
-            <p class="emptyText">There's no any Product, add Some Product</p>
-          </section>
-        </section>
+        </figure>
+        <!-- End: products -->
       </main>
-    </div>
+    </section>
     <!-- End: Container || Main section -->
+    <script src="logic.js"></script>
+    <script src="dom.js"></script>
   </body>
 </html>
