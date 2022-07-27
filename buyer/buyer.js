@@ -1,39 +1,10 @@
 const container = document.querySelector('.container')
 const inputSearch = document.querySelector('.search-input')
-const cart = []
+const cata = document.querySelector('.cata')
+const sortBtn = document.querySelector('.sorting')
+const cart = JSON.parse(localStorage.getItem('cart')) || []
 let items = JSON.parse(localStorage.getItem('products')) || [
-  {
-    name: 'aog',
-    price: '25$',
-    description: 'this is dog',
-    img: 'https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg',
-    category: 'anemil',
-    amount: 1,
-  },
-  {
-    name: 'aohg',
-    price: '25$',
-    description: 'this is dog',
-    img: 'https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg',
-    category: 'anemil',
-    amount: 1,
-  },
-  {
-    name: 'caog',
-    price: '25$',
-    description: 'this is dog',
-    img: 'https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg',
-    category: 'anemil',
-    amount: 1,
-  },
-  {
-    name: 'dog',
-    price: '25$',
-    description: 'this is dog',
-    img: 'https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg',
-    category: 'anemil',
-    amount: 1,
-  },
+  { name: 'aa', detail: 'aaa ', category: 'cats', price: '0.01', image: 'ccc' },
 ]
 function createItem(items) {
   items.forEach((item) => {
@@ -63,7 +34,7 @@ function createItem(items) {
     category.textContent = `category : ${item.category}`
     figcaption.appendChild(category)
     let description = document.createElement('p')
-    description.textContent = `description : ${item.description}`
+    description.textContent = `description : ${item.detail}`
     figcaption.appendChild(description)
   })
 }
@@ -81,5 +52,25 @@ inputSearch.addEventListener('keyup', () => {
     createItem(items)
   } else {
     createItem(search(items, inputSearch.value))
+  }
+})
+cata.addEventListener('click', () => {
+  container.textContent = ''
+  if (cata.value === 'all') {
+    createItem(items)
+  } else {
+    createItem(filterCategory(items, cata.value))
+  }
+})
+let isSort = true
+
+sortBtn.addEventListener('click', () => {
+  container.textContent = ''
+  if (isSort == true) {
+    createItem(sorting(items))
+    isSort = false
+  } else {
+    createItem(sorting(items).reverse())
+    isSort = true
   }
 })
