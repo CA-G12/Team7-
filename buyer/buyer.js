@@ -1,21 +1,6 @@
 const container = document.querySelector('.container')
-
-let items = [
-  {
-    name: 'dog',
-    price: '25$',
-    description: 'this is dog',
-    img: 'https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg',
-    category: 'anemil',
-  },
-  {
-    name: 'dog',
-    price: '25$',
-    description: 'this is dog',
-    img: 'https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg',
-    category: 'anemil',
-  },
-]
+const cart = []
+let items = JSON.parse(localStorage.getItem('products')) || []
 items.forEach((item) => {
   let card = document.createElement('figure')
   card.setAttribute('class', 'card')
@@ -24,6 +9,11 @@ items.forEach((item) => {
   img.setAttribute('src', item.img)
   let cart = document.createElement('i')
   cart.setAttribute('class', 'fa-solid fa-cart-plus')
+
+  cart.addEventListener('click', () => {
+    addToCart(item)
+  })
+
   card.appendChild(cart)
   card.appendChild(img)
   let figcaption = document.createElement('figcaption')
@@ -40,5 +30,11 @@ items.forEach((item) => {
   let description = document.createElement('p')
   description.textContent = `description : ${item.description}`
   figcaption.appendChild(description)
-  
 })
+
+function addToCart(item) {
+  cart.push(item)
+  localStorage.setItem('cart', JSON.stringify(cart))
+
+  console.log(cart)
+}

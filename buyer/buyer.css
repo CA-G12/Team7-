@@ -11,7 +11,7 @@ html {
   --background: #F8F8F8;
   --secondery: #fef7f5;
   --white: #ffffff;
-  --fontColor: #f5eded;
+  --fontColor: #f7f4f4;
   --icon: #39b34a;
 }
 body{
@@ -213,19 +213,20 @@ button {
 .container{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 
 
 }
 .container .card{
   width: 250px;
   margin: 20px;
-  border-radius: 12px;
+  position: relative;
+  /* border-radius: 12px; */
   background-color: var(--fontColor);
 
 
 }
 .container .card img {
-  border-radius: 8px 8px 0 0;
   width: 100%;
   height: 150px;
 }
@@ -241,6 +242,45 @@ padding: 5px;
 }
 
 .fa-cart-plus{
-  position: fixed;
-  /* top: 20px; */
+  position: absolute;
+  top: 10px;
+  /* left: -30px; */
+  background: rgba(252, 250, 250, 0.767);
+  cursor:pointer;
+  z-index: -5;
+  /* opacity: 0; */
+}
+.fa-cart-plus:hover{
+  background-color: var(--icon);
+  color: var(--background);
+}
+.card:hover .fa-cart-plus{
+  transition: 0.2s linear all;
+  padding: 12px;
+  border-radius: 50%;
+left: 10px !important;
+z-index: 5;
+
+}
+.active{
+  background-color: var(--icon);
+  padding: 7px 60px !important;
+  color: var(--background);
+}
+@media (max-width: 767px) {
+  .btn-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .navbar{
+    padding-top: 20px;
+    height: 100%;
+    display: block;
+
+  }
+.navbar-content{
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
 }
