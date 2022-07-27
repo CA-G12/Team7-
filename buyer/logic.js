@@ -8,5 +8,6 @@ function filterCategory(array, value) {
   return array.filter((item) => item.category === value)
 }
 function sorting(array) {
-  return array.sort((a, b) => a.price - b.price)
-}
+  if(array.length>1)
+{  return array.sort((a, b) => a.price - b.price)
+}}
