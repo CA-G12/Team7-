@@ -42,7 +42,7 @@ createItem(items)
 
 function addToCart(item) {
   cart.push({ ...item, amount: 1 })
-  console.log(cart)
+ edit-link-img
   localStorage.setItem('cart', JSON.stringify(cart))
 }
 
@@ -63,6 +63,7 @@ cata.addEventListener('click', () => {
   }
 })
 let isSort = true
+
 
 sortBtn.addEventListener('click', () => {
   container.textContent = ''
