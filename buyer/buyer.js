@@ -12,7 +12,7 @@ function createItem(items) {
     card.setAttribute('class', 'card')
     container.appendChild(card)
     let img = document.createElement('img')
-    img.setAttribute('src', item.img)
+    img.setAttribute('src', item.image)
     let cart = document.createElement('i')
     cart.setAttribute('class', 'fa-solid fa-cart-plus')
 
