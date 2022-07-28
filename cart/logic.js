@@ -1,11 +1,11 @@
-function incLogic(ele,array){
+function increaseAmounts(ele,array){
     const ar = [...array];
     const found = ar.find((x) => x.id = ele.id);
     found.amount += 1;
     return ar;
 }
 
-function decLogic(ele, array){
+function decreaseAmounts(ele, array){
     const ar = [...array];
     const found = ar.find((x) => x.id = ele.id);
     found.amount -= 1;

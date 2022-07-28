@@ -17,6 +17,7 @@ html {
 body{
   background-color: var(--background);
 }
+/* start navbar  */
 p,
 div {
   margin: 0;

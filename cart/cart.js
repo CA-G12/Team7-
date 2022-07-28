@@ -4,7 +4,6 @@ let bigDiv = document.querySelector('.products')
 
 let quantity = document.querySelector('.product-quantity')
 let totalPrice = document.querySelector('.total-price')
-console.log(totalPrice)
 let totalAmount = document.querySelector('.total-amount')
 for (let i = 0; i < items.length; i++) {
   displayCart(i)
@@ -67,8 +66,7 @@ function displayCart(index) {
   span.textContent = 'Remove'
   div2.appendChild(removeBtn)
   removeBtn.addEventListener('click', () => {
-    console.log(items[index])
-
+    console.log(totalPrice.textContent)
     if (items.length > 1) {
       items = items.filter((ele) => ele.id != items[index].id)
     } else {
@@ -85,7 +83,7 @@ function displayCart(index) {
 }
 let totalP = 0
 items.forEach((ele, i) => {
-  totalP += items[i]['price']
+  totalP += +items[i]['price']
 })
 let totalA = items.length
 totalPrice.textContent = totalP
@@ -93,19 +91,17 @@ totalAmount.textContent = totalA
 
 //function for increasing
 function increaseAmounts(ele, itemAmount, price, array) {
-  console.log(itemAmount)
   itemAmount.textContent = +itemAmount.textContent + 1
-  totalPrice.textContent = +totalPrice.textContent + price
+  totalPrice.textContent = +totalPrice.textContent + +price
   totalAmount.textContent = +totalAmount.textContent + 1
-  const ar = incLogic(ele, array)
+  const ar = increaseAmounts(ele, array)
   localStorage.setItem('cart', JSON.stringify(ar))
 }
 //function for decreasing
 function decreaseAmounts(ele, itemAmount, price, array) {
   itemAmount.textContent = +itemAmount.textContent - 1
-  console.log(totalPrice.textContent)
-  totalPrice.textContent = +totalPrice.textContent - price
+  totalPrice.textContent = +totalPrice.textContent - +price
   totalAmount.textContent = +totalAmount.textContent - 1
-  const ar = decLogic(ele, array)
+  const ar = decreaseAmounts(ele, array)
   localStorage.setItem('cart', JSON.stringify(ar))
 }

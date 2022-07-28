@@ -1,4 +1,4 @@
-const { search, filterCategory, sorting } = require('./logic')
+const { search, filterCategory, sorting } = require('../buyer/logic')
 test('Refactor our addOne function so it is pure.', function () {
   expect(search([{ name: 'a' }, { name: 'b' }], 'a')).toEqual([{ name: 'a' }])
 })

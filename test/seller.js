@@ -2,7 +2,7 @@ const {
   checkFormData,
   convertItemToObject,
   editProduct,
-} = require("./logic.js");
+} = require("../seller/logic.js");
 
 describe("Test convert data product to object", () => {
   test("Product should be object", () => {
