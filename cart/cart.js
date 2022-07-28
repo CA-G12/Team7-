@@ -5,10 +5,13 @@ let bigDiv = document.querySelector('.products')
 let quantity = document.querySelector('.product-quantity')
 let totalPrice = document.querySelector('.total-price')
 console.log(totalPrice)
-let totalAmount = document.querySelector('.total-amount')
-for (let i = 0; i < items.length; i++) {
-  displayCart(i)
-}
+let totalAmount= document.querySelector(".total-amount")
+if(items){
+for(let i =0 ;i < items.length ; i++){
+    displayCart(i)
+}}
+
+
 // function for display items in cart
 function displayCart(index) {
   const div = document.createElement('div')
@@ -83,14 +86,15 @@ function displayCart(index) {
     localStorage.setItem('cart', JSON.stringify(items))
   })
 }
-let totalP = 0
-items.forEach((ele, i) => {
-  totalP += items[i]['price']
-})
+
+let totalP= 0
+if(items){
+items.forEach((ele,i) => { 
+            totalP += items[i]["price"] })
 let totalA = items.length
 totalPrice.textContent = totalP
 totalAmount.textContent = totalA
-
+}
 //function for increasing
 function increaseAmounts(ele, itemAmount, price, array) {
   console.log(itemAmount)
